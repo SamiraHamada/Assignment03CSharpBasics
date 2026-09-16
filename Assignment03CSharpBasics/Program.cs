@@ -4,6 +4,15 @@ namespace Assignment03CSharpBasics
 {
     internal class Program
     {
+        public static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+
+
+
+
+
         static void Main(string[] args)
         {
             #region 1st Question
@@ -18,6 +27,12 @@ namespace Assignment03CSharpBasics
             // shelf 1 has 1, 4 copies.Print the number of copies on shelf 1, slot 0.
             int[,] shelfCopies = { { 3, 5 }, { 1, 4 } };
             Console.WriteLine(shelfCopies[1, 0]);
+            #endregion
+
+            #region 3rd Question
+            // Write a method called PrintWelcomeMessage that takes no parameters and prints
+            // "Welcome to the Library!".Call it from Main. 
+            PrintWelcomeMessage();
             #endregion
 
 
