@@ -51,6 +51,14 @@ namespace Assignment03CSharpBasics
             Console.WriteLine("Book title: " + title + ", Pages: " + pages);
         }
 
+        public static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+
 
 
 
@@ -136,6 +144,15 @@ namespace Assignment03CSharpBasics
             //parameters, passing pages before title. 
             PrintBookInfo(pages: 400, title: "Clean Code");
             #endregion
+
+            #region 12th Question
+            // Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+            // Call it with three book titles.
+            PrintAllTitles("Clean Code", "The Pragmatic Programmer", "Design Patterns");
+
+            #endregion
+
+
         }
     }
 }
