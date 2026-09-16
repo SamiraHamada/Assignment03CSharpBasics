@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment03CSharpBasics
 {
@@ -25,6 +26,11 @@ namespace Assignment03CSharpBasics
         public static void AddBonusPagesByRef(ref int pages)
         {
             pages += 50;
+        }
+
+        public static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
 
 
@@ -82,6 +88,14 @@ namespace Assignment03CSharpBasics
             int pages2 = 400;
             AddBonusPagesByRef(ref pages2);
             Console.WriteLine(pages2); // the output will be 450 because the method AddBonusPagesByRef modifies the original variable pages
+            #endregion
+
+            #region 8th Question
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward.
+            double[] prices3 = { 25.5, 40.0 };
+            ReplaceArray(ref prices3); // the method ReplaceArray replaces the original array with a new array because it uses the ref
+            Console.WriteLine(prices3.Length);// the output will be 3 because the method ReplaceArray replaces the original array with a new array
             #endregion
 
         }
