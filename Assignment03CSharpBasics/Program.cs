@@ -128,8 +128,11 @@ namespace Assignment03CSharpBasics
             //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
             //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it and print the price if found
             double price;
-            TryGetPrice("Clean Code", out price);
-            Console.WriteLine(price);
+            if (TryGetPrice("Clean Code", out price))
+            {
+                Console.WriteLine(price);
+            }
+
             #endregion
 
             #region 10th Question
