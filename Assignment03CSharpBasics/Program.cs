@@ -22,6 +22,11 @@ namespace Assignment03CSharpBasics
             prices[0] -= 5;
         }
 
+        public static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+        }
+
 
 
 
@@ -69,6 +74,14 @@ namespace Assignment03CSharpBasics
             double[] prices2 = { 25.5, 40.0 };
             ApplyDiscount(prices2);
             Console.WriteLine(prices2[0]); // the output will be 20.5 because the method ApplyDiscount modifies the original array
+            #endregion
+
+            #region 7th Question
+            // Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            // Call it and print pages afterward. How is the result different from question 5 ?
+            int pages2 = 400;
+            AddBonusPagesByRef(ref pages2);
+            Console.WriteLine(pages2); // the output will be 450 because the method AddBonusPagesByRef modifies the original variable pages
             #endregion
 
         }
