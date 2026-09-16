@@ -9,6 +9,11 @@ namespace Assignment03CSharpBasics
             Console.WriteLine("Welcome to the Library!");
         }
 
+        public static void PrintBookTitle(string title)
+        {
+            Console.WriteLine("Book title: " + title);
+        }
+
 
 
 
@@ -35,9 +40,11 @@ namespace Assignment03CSharpBasics
             PrintWelcomeMessage();
             #endregion
 
-
-
-
+            #region 4th Question
+            // Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with
+            // "Clean Code".
+            PrintBookTitle("Clean Code"); 
+            #endregion
         }
     }
 }
