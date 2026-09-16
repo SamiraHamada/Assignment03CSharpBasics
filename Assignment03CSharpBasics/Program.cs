@@ -13,6 +13,10 @@ namespace Assignment03CSharpBasics
         {
             Console.WriteLine("Book title: " + title);
         }
+        public static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
 
 
 
@@ -43,7 +47,15 @@ namespace Assignment03CSharpBasics
             #region 4th Question
             // Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with
             // "Clean Code".
-            PrintBookTitle("Clean Code"); 
+            PrintBookTitle("Clean Code");
+            #endregion
+
+            #region 5th Question
+            // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why? 
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages); // the output will be 400 because the method AddBonusPages does not modify the original variable pages, it only modifies a copy of it.
             #endregion
         }
     }
