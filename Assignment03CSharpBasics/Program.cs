@@ -17,6 +17,10 @@ namespace Assignment03CSharpBasics
         {
             pages += 50;
         }
+        public static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
 
 
 
@@ -57,6 +61,16 @@ namespace Assignment03CSharpBasics
             AddBonusPages(pages);
             Console.WriteLine(pages); // the output will be 400 because the method AddBonusPages does not modify the original variable pages, it only modifies a copy of it.
             #endregion
+
+            #region 6th Question
+            // Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it
+            // with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            // see, and why?
+            double[] prices2 = { 25.5, 40.0 };
+            ApplyDiscount(prices2);
+            Console.WriteLine(prices2[0]); // the output will be 20.5 because the method ApplyDiscount modifies the original array
+            #endregion
+
         }
     }
 }
