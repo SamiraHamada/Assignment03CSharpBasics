@@ -32,6 +32,19 @@ namespace Assignment03CSharpBasics
         {
             prices = new double[] { 10.0, 12.5, 15.0 };
         }
+        public static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+        }
 
 
 
@@ -98,6 +111,13 @@ namespace Assignment03CSharpBasics
             Console.WriteLine(prices3.Length);// the output will be 3 because the method ReplaceArray replaces the original array with a new array
             #endregion
 
+            #region 9th Question
+            //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+            //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it and print the price if found
+            double price;
+            TryGetPrice("Clean Code", out price);
+            Console.WriteLine(price);
+            #endregion
         }
     }
 }
